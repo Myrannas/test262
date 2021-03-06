@@ -18,8 +18,8 @@ Test262Error.prototype.toString = function () {
   return "Test262Error: " + this.message;
 };
 
-Test262Error.thrower = (...args) => {
-  throw new Test262Error(...args);
+Test262Error.thrower = function () {
+  throw new Test262Error(arguments);
 };
 
 var $ERROR = Test262Error.thrower;
